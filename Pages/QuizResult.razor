@@ -1,0 +1,38 @@
+@page "/quizResult"
+@using Wasm.DigitalHistoryBook.Interfaces
+@inject IUserProgressService UserProgressService
+
+<h3>Quiz Sonucu</h3>
+
+@if (userProgress == null)
+{
+    <p>İlerleme yükleniyor...</p>
+}
+else
+{
+    <p>Kullanıcı İlerleme: @userProgress</p> <!-- Kullanıcı ilerlemesini göster -->
+    <h4>Sonuçlar:</h4>
+    <ul>
+        @foreach (var result in quizResults)
+        {
+            <li>@result - @result ? "Doğru" : "Yanlış"</li> <!-- Her sorunun sonucu -->
+        }
+    </ul>
+}
+
+@code {
+    private int userProgress;
+    private List<QuizResult> quizResults;
+
+    protected override async Task OnInitializedAsync()
+    {
+        userProgress = UserProgressService.GetProgress("userId"); // Kullanıcı ilerlemesini al
+        quizResults = await GetQuizResults(); // Quiz sonuçlarını al
+    }
+
+    private async Task<List<QuizResult>> GetQuizResults()
+    {
+        // Burada quiz sonuçlarını almak için gerekli işlemleri yapın
+        return new List<QuizResult>(); // Örnek olarak boş bir liste döndür
+    }
+}

@@ -1,0 +1,64 @@
+@page "/stories"
+@using DigitalHistoryBook.Models
+@using Wasm.DigitalHistoryBook.Interfaces
+@inject IStoryService StoryService
+@inject NavigationManager Navigation
+
+<h3 class="text-3xl font-bold mb-4">Eğlenceli Hikaye Koleksiyonu</h3>
+
+<div class="input-group mb-3 flex">
+    <input type="text" class="form-control" placeholder="Hikaye Ara" aria-label="Hikaye Ara" aria-describedby="button-addon2" style="margin-right: 10px;">
+    <button class="btn btn-primary" type="button" id="button-addon2">Ara</button>
+</div>
+
+@if (stories == null)
+{
+    <p class="text-lg">Hikayeler yükleniyor...</p>
+}
+else if (stories.Count == 0)
+{
+    <p class="text-lg">Hiç hikaye bulunamadı.</p>
+}
+else
+{
+    var groupedStories = stories.GroupBy(s => s.AgeGroup); // Yaş grubuna göre gruplama
+
+    foreach (var group in groupedStories)
+    {
+        <h4 class="text-2xl font-semibold mt-4">@group.Key.ToString() Hikayeleri</h4> <!-- Yaş grubunu göster -->
+        <ul class="list-disc pl-5">
+            @foreach (var story in group)
+            {
+                <li class="mb-4">
+                    <a href="/storyDetails/@story.Id" class="text-blue-500 hover:underline">@story.Title</a>
+                    <p class="text-gray-700">Tür: @story.Genre.ToString(), İllüstrasyon: @story.IllustrationStyle.ToString()</p>
+                </li>
+            }
+        </ul>
+    }
+}
+
+@code {
+    private List<Story> stories;
+
+    protected override async Task OnInitializedAsync()
+    {
+        stories = await StoryService.GetStoriesAsync(); // Hikayeleri al
+    }
+    
+    private async Task DeleteStoryAsync(int storyId)
+    {
+        await StoryService.DeleteStoryAsync(storyId); // Hikayeyi sil
+        stories = await StoryService.GetStoriesAsync(); // Hikayeleri güncelle
+    }
+    
+    private async Task EditStoryAsync(int storyId)
+    {
+        Navigation.NavigateTo($"/editStory/{storyId}"); // Hikaye düzenleme sayfasına git
+    }
+    
+    private async Task CreateStoryAsync()
+    {
+        Navigation.NavigateTo("/createStory"); // Hikaye oluşturma sayfasına git
+    }
+}
