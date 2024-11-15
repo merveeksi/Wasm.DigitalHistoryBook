@@ -1058,3 +1058,4 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/zut9de47ww.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.Dig.5C51CFA3.Up2Date
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/ref/Wasm.DigitalHistoryBook.dll
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.sourcelink.json
