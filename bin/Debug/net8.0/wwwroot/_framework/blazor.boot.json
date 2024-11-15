@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Wasm.DigitalHistoryBook",
   "resources": {
-    "hash": "sha256-BD0hgAuX0finHdHIxf6dlHP49N6s4E3sb4rZlzixj+8=",
+    "hash": "sha256-wTYV0qrg+wrGVAvU7ZMFRP1Mn2VI428KYY9UghJ10bM=",
     "jsModuleNative": {
       "dotnet.native.8.0.7.gpvyg56y8f.js": "sha256-tFsxPBbhkdn6GKNBKvCRLzrfAHdyM86odYTe0MtrwMk="
     },
@@ -213,10 +213,10 @@
       "mscorlib.wasm": "sha256-fLbZiSHBNdpHoh4EgRqMaNP5NQyIK5TEj6AXFLqo8m8=",
       "netstandard.wasm": "sha256-d4xbAE8qrKq5euUoZHPO+jkYPjlCYBzUew45MKsYKic=",
       "System.Private.CoreLib.wasm": "sha256-8yi6NcX1lkNQgV4WKjnMBYIZyKh4P+OXnXVQmgxGZD4=",
-      "Wasm.DigitalHistoryBook.wasm": "sha256-gJgYJL7Z+ABkIemPUxLwq2gn/YknUS85wm9odPh//UU="
+      "Wasm.DigitalHistoryBook.wasm": "sha256-Y0hVDEQSxN5vKqqQ5VzZhx1GCjDP9eLAASefAuwsCu4="
     },
     "pdb": {
-      "Wasm.DigitalHistoryBook.pdb": "sha256-Sl1MP9MkbjqV6NpOKODf8OV3C/ykCclkQuAh0b/8MNc="
+      "Wasm.DigitalHistoryBook.pdb": "sha256-flzsO1Z4n2ARpeiEXKLMNVzKlMuycPa6u1W9kTqtEu4="
     }
   },
   "cacheBootResources": true,
