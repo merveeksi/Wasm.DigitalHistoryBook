@@ -12,65 +12,62 @@
 <PageTitle>Yeni Hikaye Oluştur</PageTitle>
 
 <div class="container mx-auto p-4">
-<div class="card bg-base-200 shadow-xl mb-8 transition-transform transform hover:scale-105">
-    <div class="card-body">
-        <h2 class="card-title mb-4">Kendi hikayeni oluşturmak ister misin?</h2>
-        <textarea @bind=@prompt class="textarea textarea-bordered w-full mb-4 transition-transform transform hover:scale-105" placeholder="Açıklamayı buraya yazınız..." style="height: 200px;"></textarea>
+    <div class="card bg-base-200 shadow-xl mb-8 transition-transform transform hover:scale-105">
+        <div class="card-body">
+            <h2 class="card-title mb-4 mt-8">Kendi hikayeni oluşturmak ister misin?</h2>
+            <textarea @bind=@prompt class="textarea textarea-bordered w-full mb-4" placeholder="Açıklamayı buraya yazınız..." style="height: 200px;"></textarea>
 
-        <textarea @bind=@title class="textarea textarea-bordered w-full mb-4 transition-transform transform hover:scale-105" placeholder="Hikaye Başlığı" style="height: 50px;"></textarea>
+            <textarea @bind=@title class="textarea textarea-bordered w-full mb-4" placeholder="Hikaye Başlığı" style="height: 50px;"></textarea>
             
-        <!-- Genre Selection Dropdown -->
-        <details class="dropdown">
-            <summary class="textarea textarea-bordered w-full mb-4 transition-transform transform hover:scale-105">Tür Seçin</summary>
-            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                @foreach (var genre in Enum.GetValues(typeof(Genre)).Cast<Genre>())
+            <!-- Tür Seçin -->
+            <h3 class="font-bold mb-2">Tür Seçin</h3>
+            <select @bind="genre" class="select select-bordered w-full mb-4">
+                <option value="">Seçiniz</option>
+                @foreach (var g in Enum.GetValues(typeof(Genre)).Cast<Genre>())
                 {
-                    <li><button type="button" @onclick="() => SelectGenre(genre)">@genre.ToString()</button></li>
+                    <option value="@g">@g.ToString()</option>
                 }
-            </ul>
-            <!-- AgeGroup Selection Dropdown -->
-        </details>
-        <details class="dropdown">
-            <summary class="textarea textarea-bordered w-full mb-4 transition-transform transform hover:scale-105">Yaş Grubu Seçin</summary>
-            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            </select>
+
+            <!-- Yaş Grubu Seçin -->
+            <h3 class="font-bold mb-2">Yaş Grubu Seçin</h3>
+            <select @bind="targetAge" class="select select-bordered w-full mb-4">
+                <option value="">Seçiniz</option>
                 @foreach (var age in Enum.GetValues(typeof(AgeGroup)).Cast<AgeGroup>())
                 {
-                    <li><button type="button" @onclick="() => SelectAgeGroup(age)">@age.ToString()</button></li>
+                    <option value="@age">@age.ToString()</option>
                 }
-            </ul>
-            <!-- IllustrationStyle Selection Dropdown -->
-        </details>
-        <details class="dropdown">
-            <summary class="textarea textarea-bordered w-full mb-4 transition-transform transform hover:scale-105">İllüstrasyon Stili Seçin</summary>
-            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            </select>
+
+            <!-- İllüstrasyon Stili Seçin -->
+            <h3 class="font-bold mb-2">İllüstrasyon Stili Seçin</h3>
+            <select @bind="illustrationStyle" class="select select-bordered w-full mb-4">
+                <option value="">Seçiniz</option>
                 @foreach (var style in Enum.GetValues(typeof(IllustrationStyle)).Cast<IllustrationStyle>())
                 {
-                    <li><button type="button" @onclick="() => SelectIllustrationStyle(style)">@style.ToString()</button></li>
+                    <option value="@style">@style.ToString()</option>
                 }
-            </ul>
-        </details>
-        <div class="card-actions justify-end">
-            <button class="btn btn-primary btn-lg transition-transform transform hover:scale-110 hover:bg-gradient-to-r from-purple-500 to-indigo-500 shadow-lg" @onclick="GenerateStoryAsync">Hikaye Oluştur</button>
-        </div>
-        <div class="flex h-screen">
-            <div role="button" @onclick="@(() => Navigation.NavigateTo("/StoryDetails"))" class="w-1/2 flex items-center justify-center transition-transform duration-300 ease-out @leftSectionClasses">
-                <h1 class="text-4xl font-bold text-white">Hikaye Oluştur</h1>
+            </select>
+
+            <div class="card-actions justify-end">
+                <button class="btn btn-primary btn-lg" @onclick="GenerateStoryAsync">Hikaye Oluştur</button>
             </div>
+           
+            @if (!string.IsNullOrEmpty(generatedStory))
+            {
+                <h4 class="text-2xl font-semibold mt-4">Oluşturulan Hikaye:</h4>
+                <p>@generatedStory</p>
+                <button class="btn btn-secondary mt-4" @onclick="NavigateToStoryDetails">Hikaye Detaylarına Git</button>
+            }
         </div>
-        @if (!string.IsNullOrEmpty(generatedStory))
+
+        @if (isLoading)
         {
-            <h4 class="text-2xl font-semibold mt-4">Oluşturulan Hikaye:</h4>
-            <p>@generatedStory</p>
+            <div class="flex justify-center items-center h-64">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
         }
     </div>
-
-    @if (isLoading)
-    {
-        <div class="flex justify-center items-center h-64">
-            <span class="loading loading-spinner loading-lg"></span>
-        </div>
-    }
-</div>
 </div>
 
 @code
@@ -82,22 +79,7 @@
     private string prompt = string.Empty;
     private string generatedStory = string.Empty;
     private bool isLoading = false;
-
-     private string leftSectionClasses = "bg-gradient-to-b from-[#4A00E0] to-[#8E2DE2] rounded-lg";
-
-    private void SelectGenre(Genre selectedGenre)
-    {
-        genre = selectedGenre;
-    }
-    private void SelectAgeGroup(AgeGroup selectedAgeGroup)
-    {
-        targetAge = selectedAgeGroup;
-    }
-
-    private void SelectIllustrationStyle(IllustrationStyle selectedStyle)
-    {
-        illustrationStyle = selectedStyle;
-    }
+    private int storyId;
 
     private async Task GenerateStoryAsync()
     {
@@ -110,8 +92,7 @@
             {
                 Messages = new List<ChatMessage>
                 {
-                    ChatMessage.FromSystem("Sen çocukların yaş ve ilgi alanlarına göre hikaye oluşturabilirsin. Hikaye oluşturma konusunda senden iyisi yok. " +
-                                           "Açık, net, anlaşılır ve çocuğun yaşına uygun kelimeleri bir araya getirmekte üzerine yok. Ayrıca çocuklar seni çok seviyor, sen de onları seviyorsun."),
+                    ChatMessage.FromSystem("Sen çocukların yaş ve ilgi alanlarına göre hikaye oluşturabilirsin."),
                     ChatMessage.FromUser(prompt),
                 },
                 Model = OpenAI.ObjectModels.Models.Gpt_4o,
@@ -121,7 +102,6 @@
             if (completionResult.Successful)
             {
                 generatedStory = completionResult.Choices.First().Message.Content;
-                Console.WriteLine(completionResult.Choices.First().Message.Content);
             }
         }
         catch (Exception e)
@@ -133,5 +113,11 @@
         {
             isLoading = false;
         }
+    }
+
+    private void NavigateToStoryDetails()
+    {
+        // Hikaye başlığını ve içeriğini StoryDetails sayfasına geçirin
+        Navigation.NavigateTo($"/storyDetails/{storyId}");
     }
 }

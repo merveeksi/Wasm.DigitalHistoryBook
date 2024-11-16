@@ -26,6 +26,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Pages/AudioBooks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXVkaW9Cb29rcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,8 +38,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlU3RvcnkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Pages/Pdf.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGRmLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Pages/QuizResult.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpelJlc3VsdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Pages/StarWarsButton.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3RhcldhcnNCdXR0b24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Pages/StoryDetails.razor]

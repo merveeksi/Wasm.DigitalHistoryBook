@@ -4,6 +4,7 @@
 @inject IStoryService StoryService
 @inject IAudioService AudioService
 @inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
 
 <div class="container mx-auto p-4">
     <h3 class="text-3xl font-bold mb-4">@story?.Title</h3>
@@ -32,12 +33,12 @@
 
 @code {
     [Parameter]
-    public int Id { get; set; }
+    public int id { get; set; }
     private Story story;
 
     protected override async Task OnInitializedAsync()
     {
-        story = await StoryService.GetStoryByIdAsync(Id); // Hikaye detaylarını al
+        story = await StoryService.GetStoryByIdAsync(id); // Hikaye detaylarını al
     }
 
     private async Task PlayStory()

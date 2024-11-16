@@ -15,10 +15,16 @@ else
     <ul>
         @foreach (var result in quizResults)
         {
-            <li>@result - @result ? "Doğru" : "Yanlış"</li> <!-- Her sorunun sonucu -->
+           // <li>@result - @(result ? "Doğru" : "Yanlış")</li> <!-- Her sorunun sonucu -->
         }
     </ul>
 }
+
+<h2 class="text-2xl font-bold mt-8">Avatarlar</h2>
+<div class="flex h-full w-full flex-col items-center justify-center gap-6">
+    <div>People who love SyntaxUI</div>
+    <AvatarCarousel />
+</div>
 
 @code {
     private int userProgress;
@@ -34,5 +40,66 @@ else
     {
         // Burada quiz sonuçlarını almak için gerekli işlemleri yapın
         return new List<QuizResult>(); // Örnek olarak boş bir liste döndür
+    }
+}
+
+@code {
+    private List<string> defaultAvatars = new List<string>
+    {
+        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
+        "https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a",
+        "https://images.unsplash.com/photo-1645830166230-187caf791b90",
+        "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa",
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+        "https://images.unsplash.com/photo-1569913486515-b74bf7751574",
+        "https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a",
+        "https://images.unsplash.com/photo-1645830166230-187caf791b90",
+        "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa",
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+        "https://images.unsplash.com/photo-1569913486515-b74bf7751574",
+    };
+
+    private int activeIndex = 0;
+
+    private int GetPlacementIndex(int index)
+    {
+        int half = defaultAvatars.Count / 2;
+        int diff = index - activeIndex;
+
+        if (diff > half)
+        {
+            return diff - defaultAvatars.Count;
+        }
+        else if (diff < -half)
+        {
+            return diff + defaultAvatars.Count;
+        }
+        else
+        {
+            return diff;
+        }
+    }
+
+    private bool IsAtEnd(int placementIndex)
+    {
+        int half = defaultAvatars.Count / 2;
+        return placementIndex == -half || placementIndex == half;
+    }
+
+    private void UpdateActiveIndex()
+    {
+        activeIndex = (activeIndex + 1) % defaultAvatars.Count;
+    }
+
+    private void StartAvatarCarousel()
+    {
+        var timer = new System.Timers.Timer(3000);
+        timer.Elapsed += (sender, e) => UpdateActiveIndex();
+        timer.Start();
+    }
+
+    protected override void OnInitialized()
+    {
+        StartAvatarCarousel();
     }
 }

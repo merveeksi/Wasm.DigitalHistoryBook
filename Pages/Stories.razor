@@ -1,64 +1,125 @@
 @page "/stories"
-@using DigitalHistoryBook.Models
-@using Wasm.DigitalHistoryBook.Interfaces
-@inject IStoryService StoryService
 @inject NavigationManager Navigation
 
-<h3 class="text-3xl font-bold mb-4">Eğlenceli Hikaye Koleksiyonu</h3>
-
-<div class="input-group mb-3 flex">
-    <input type="text" class="form-control" placeholder="Hikaye Ara" aria-label="Hikaye Ara" aria-describedby="button-addon2" style="margin-right: 10px;">
-    <button class="btn btn-primary" type="button" id="button-addon2">Ara</button>
+<div class="text-center mb-8 mt-8">
+    <h1 class="text-4xl font-bold">Tüm Hikayeler</h1>
+    <p class="text-lg text-gray-600">Binlerce hikaye okumak için sizi bekliyoruz!</p>
 </div>
 
-@if (stories == null)
-{
-    <p class="text-lg">Hikayeler yükleniyor...</p>
-}
-else if (stories.Count == 0)
-{
-    <p class="text-lg">Hiç hikaye bulunamadı.</p>
-}
-else
-{
-    var groupedStories = stories.GroupBy(s => s.AgeGroup); // Yaş grubuna göre gruplama
+<div class="flex justify-end mb-4">
+    <input type="text" @bind="searchTerm" placeholder="Hikaye ara..." class="input input-bordered border-2 border-gray-300 rounded-full px-4 py-2" style="width: 300px; border-radius: 30px;" />
+    <button class="btn btn-primary ml-2 border-2 rounded-full px-4 py-2" @onclick="SearchStories">Ara</button>
+</div>
 
-    foreach (var group in groupedStories)
-    {
-        <h4 class="text-2xl font-semibold mt-4">@group.Key.ToString() Hikayeleri</h4> <!-- Yaş grubunu göster -->
-        <ul class="list-disc pl-5">
-            @foreach (var story in group)
-            {
-                <li class="mb-4">
-                    <a href="/storyDetails/@story.Id" class="text-blue-500 hover:underline">@story.Title</a>
-                    <p class="text-gray-700">Tür: @story.Genre.ToString(), İllüstrasyon: @story.IllustrationStyle.ToString()</p>
-                </li>
-            }
-        </ul>
-    }
-}
+<div class="mt-8">
+    <h2 class="text-2xl font-bold">3-5 Yaş Kitaplar</h2>
+    <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="card bg-base-100 shadow-md">
+            <figure>
+                <img src="/Users/pc/Desktop/kitap.png" alt="Kitap 1" />
+            </figure>
+            <div class="card-body">
+                <h3 class="font-bold">Kitap 1</h3>
+                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+            </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+            <figure>
+                <img src="https://example.com/book2.jpg" alt="Kitap 2" />
+            </figure>
+            <div class="card-body">
+                <h3 class="font-bold">Kitap 2</h3>
+                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+            </div>
+        </div>
+        <!-- Diğer kitaplar buraya eklenebilir -->
+    </div>
+</div>
+
+<div class="mt-8">
+    <h2 class="text-2xl font-bold">6-8 Yaş Kitaplar</h2>
+    <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="card bg-base-100 shadow-md">
+            <figure>
+                <img src="https://example.com/book3.jpg" alt="Kitap 3" />
+            </figure>
+            <div class="card-body">
+                <h3 class="font-bold">Kitap 3</h3>
+                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+            </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+            <figure>
+                <img src="https://example.com/book4.jpg" alt="Kitap 4" />
+            </figure>
+            <div class="card-body">
+                <h3 class="font-bold">Kitap 4</h3>
+                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+            </div>
+        </div>
+        <!-- Diğer kitaplar buraya eklenebilir -->
+    </div>
+</div>
+
+<div class="mt-8">
+    <h2 class="text-2xl font-bold">9-12 Yaş Kitaplar</h2>
+    <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="card bg-base-100 shadow-md">
+            <figure>
+                <img src="https://example.com/book5.jpg" alt="Kitap 5" />
+            </figure>
+            <div class="card-body">
+                <h3 class="font-bold">Kitap 5</h3>
+                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+            </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+            <figure>
+                <img src="https://example.com/book6.jpg" alt="Kitap 6" />
+            </figure>
+            <div class="card-body">
+                <h3 class="font-bold">Kitap 6</h3>
+                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+            </div>
+        </div>
+        <!-- Diğer kitaplar buraya eklenebilir -->
+    </div>
+</div>
+
+<h2 class="text-2xl font-bold mt-8">Sesli Kitaplar</h2>
+<div class="grid grid-cols-3 gap-4 mt-4">
+    <div class="card bg-base-100 shadow-md">
+        <figure>
+            <img src="https://example.com/audioBook1.jpg" alt="Sesli Kitap 1" />
+        </figure>
+        <div class="card-body">
+            <h3 class="font-bold">Sesli Kitap 1</h3>
+            @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/audioBook1.pdf')">Dinle</button> *@
+        </div>
+    </div>
+    <div class="card bg-base-100 shadow-md">
+        <figure>
+            <img src="https://example.com/audioBook2.jpg" alt="Sesli Kitap 2" />
+        </figure>
+        <div class="card-body">
+            <h3 class="font-bold">Sesli Kitap 2</h3>
+            @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/audioBook2.pdf')">Dinle</button> *@
+        </div>
+    </div>
+    <!-- Diğer sesli kitaplar buraya eklenebilir -->
+</div>
 
 @code {
-    private List<Story> stories;
+    private string searchTerm = "";
 
-    protected override async Task OnInitializedAsync()
+    private void SearchStories()
     {
-        stories = await StoryService.GetStoriesAsync(); // Hikayeleri al
+        // Arama işlemi burada gerçekleştirilecek
+        // Örneğin, hikayeleri filtrelemek için bir servis çağrısı yapılabilir
     }
-    
-    private async Task DeleteStoryAsync(int storyId)
+
+    private void NavigateToPdf(string pdfUrl)
     {
-        await StoryService.DeleteStoryAsync(storyId); // Hikayeyi sil
-        stories = await StoryService.GetStoriesAsync(); // Hikayeleri güncelle
-    }
-    
-    private async Task EditStoryAsync(int storyId)
-    {
-        Navigation.NavigateTo($"/editStory/{storyId}"); // Hikaye düzenleme sayfasına git
-    }
-    
-    private async Task CreateStoryAsync()
-    {
-        Navigation.NavigateTo("/createStory"); // Hikaye oluşturma sayfasına git
+        Navigation.NavigateTo($"/pdf-viewer?pdfUrl={pdfUrl}");
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vj8NCTeZGuE=",
+  "dgSpecHash": "eE/cXjZ7lCs=",
   "success": true,
   "projectFilePath": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "/Users/pc/.nuget/packages/microsoft.jsinterop.webassembly/8.0.7/microsoft.jsinterop.webassembly.8.0.7.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.net.illink.tasks/8.0.7/microsoft.net.illink.tasks.8.0.7.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.net.sdk.webassembly.pack/8.0.7/microsoft.net.sdk.webassembly.pack.8.0.7.nupkg.sha512",
+    "/Users/pc/.nuget/packages/pdf.js/1.3.91/pdf.js.1.3.91.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",

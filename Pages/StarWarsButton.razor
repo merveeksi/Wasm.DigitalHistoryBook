@@ -1,0 +1,76 @@
+@page "/star-wars-button"
+@using System.Timers
+@inject IJSRuntime JS
+
+
+<button @ref="buttonRef" class="star-wars-button" @onclick="GenerateStars">
+    @foreach (var star in Stars)
+    {
+        <div class="star"
+        style="left: @star.Xpx; top: @star.Ypx; width: @star.Sizepx; height: @star.Sizepx; animation: move @star.Speedms linear infinite;"></div>
+
+    }
+    <span class="button-text">SyntaxUI</span>
+</button>
+
+@code {
+    private ElementReference buttonRef;
+    private List<Star> Stars { get; set; } = new List<Star>();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await GenerateStars();
+            // Resize handling
+            await JS.InvokeVoidAsync("addResizeEvent", DotNetObjectReference.Create(this));
+        }
+    }
+
+    private async Task GenerateStars()
+    {
+        var rect = await JS.InvokeAsync<Models.Star.DOMRect>("getBoundingClientRect", buttonRef);
+        var random = new Random();
+
+        Stars = Enumerable.Range(0, 50).Select(i => new Star
+        {
+            Id = i,
+            X = random.NextDouble() * rect.Width,
+            Y = random.NextDouble() * rect.Height,
+            Size = random.NextDouble() * 2 + 1,
+            Speed = random.Next(2000, 5000) // in ms
+        }).ToList();
+
+        StateHasChanged();
+    }
+
+    [JSInvokable]
+    public Task OnResize()
+    {
+        return GenerateStars();
+    }
+
+    private class Star
+    {
+        public Star(object speedms, object ypx)
+        {
+            Speedms = speedms;
+            Ypx = ypx;
+        }
+
+        public Star()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Id { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Size { get; set; }
+        public int Speed { get; set; } // in ms
+        public object Speedms { get; set; }
+        public object Xpx { get; set; }
+        public object Ypx { get; set; }
+        public object Sizepx { get; set; }
+    }
+}

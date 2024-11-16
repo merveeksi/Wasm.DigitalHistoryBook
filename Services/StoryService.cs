@@ -73,6 +73,11 @@ public class StoryService : IStoryService {
         return result["story"];
     }
 
+    public Task<Story> GetStoryByIdAsync(string id)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<Story> GetStoryByIdAsync(int id) {
         return _stories.FirstOrDefault(s => s.Id == id);
     }
