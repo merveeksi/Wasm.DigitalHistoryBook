@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "eE/cXjZ7lCs=",
+  "dgSpecHash": "mieyOlKc3oQ=",
   "success": true,
   "projectFilePath": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook.csproj",
   "expectedPackageFiles": [
     "/Users/pc/.nuget/packages/betalgo.openai/8.7.2/betalgo.openai.8.7.2.nupkg.sha512",
+    "/Users/pc/.nuget/packages/fontawesome/4.7.0/fontawesome.4.7.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.aspnetcore.authorization/8.0.7/microsoft.aspnetcore.authorization.8.0.7.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.aspnetcore.components/8.0.7/microsoft.aspnetcore.components.8.0.7.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.aspnetcore.components.analyzers/8.0.7/microsoft.aspnetcore.components.analyzers.8.0.7.nupkg.sha512",

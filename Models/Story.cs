@@ -11,7 +11,7 @@ public class Story
     public IllustrationStyle IllustrationStyle { get; set; }
     public string Author { get; set; }
     public string ImageUrl { get; set; }
-     public string FilePath { get; set; } // Dosya yolu
+    public string PdfUrl { get; set; } // Dosya yolu
     public AgeGroup AgeGroup { get; set; }  // Yaş grubu (örn: 5-7, 8-10 yaş)
     public ReadingLevel ReadingLevel { get; set; }  // Okuma seviyesi (Başlangıç, Orta, İleri)
     public TimeSpan EstimatedReadTime { get; set; }  // Tahmini okuma süresi

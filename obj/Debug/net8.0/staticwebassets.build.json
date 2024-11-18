@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PUSpTcFS8UcRTxmvBP79et1tORSgM3MhpEKxLKVqmJk=",
+  "Hash": "NtLupi7wV0RIXm+xMeBpyR0WXP4e0Wd+HDOOf7uYD6I=",
   "Source": "Wasm.DigitalHistoryBook",
   "BasePath": "/",
   "Mode": "Root",
@@ -8073,6 +8073,25 @@
       "OriginalItemSpec": "wwwroot/icon-192.png"
     },
     {
+      "Identity": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/kitap.png",
+      "SourceId": "Wasm.DigitalHistoryBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "img/kitap.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/kitap.png"
+    },
+    {
       "Identity": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/index.html",
       "SourceId": "Wasm.DigitalHistoryBook",
       "SourceType": "Discovered",
@@ -8130,12 +8149,12 @@
       "OriginalItemSpec": "wwwroot/js/pdf-viewer.js"
     },
     {
-      "Identity": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/06183054_neYeli_dere.pdf",
+      "Identity": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/JackLondon.pdf",
       "SourceId": "Wasm.DigitalHistoryBook",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/",
       "BasePath": "/",
-      "RelativePath": "pdf/06183054_neYeli_dere.pdf",
+      "RelativePath": "pdf/JackLondon.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -8146,15 +8165,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/pdf/06183054_neYeli_dere.pdf"
+      "OriginalItemSpec": "wwwroot/pdf/JackLondon.pdf"
     },
     {
-      "Identity": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/jackLondon.pdf",
+      "Identity": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/NeseliDere.pdf",
       "SourceId": "Wasm.DigitalHistoryBook",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/",
       "BasePath": "/",
-      "RelativePath": "pdf/jackLondon.pdf",
+      "RelativePath": "pdf/NeseliDere.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -8165,26 +8184,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/pdf/jackLondon.pdf"
-    },
-    {
-      "Identity": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/sample.pdf",
-      "SourceId": "Wasm.DigitalHistoryBook",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "pdf/sample.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/pdf/sample.pdf"
+      "OriginalItemSpec": "wwwroot/pdf/NeseliDere.pdf"
     },
     {
       "Identity": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/sample-data/weather.json",

@@ -132,3 +132,45 @@ main[b-gl0tguxalk] {
 .my-clickable-button[b-qstf0g498d] {
     cursor: pointer;
 }
+.relative[b-qstf0g498d] {
+    position: relative;
+}
+
+.overflow-hidden[b-qstf0g498d] {
+    overflow: hidden;
+}
+
+.flex[b-qstf0g498d] {
+    display: flex;
+}
+
+.transition-transform[b-qstf0g498d] {
+    transition: transform 0.3s ease;
+}
+.pagination[b-qstf0g498d] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button[b-qstf0g498d] {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled[b-qstf0g498d] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pagination button:hover:not(:disabled)[b-qstf0g498d] {
+    background-color: #d0d0d0;
+}
+.button-right[b-qstf0g498d] {
+    float: right;
+}

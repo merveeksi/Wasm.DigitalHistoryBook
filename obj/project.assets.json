@@ -19,6 +19,9 @@
           }
         }
       },
+      "FontAwesome/4.7.0": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.7": {
         "type": "package",
         "dependencies": {
@@ -636,6 +639,9 @@
           }
         }
       },
+      "FontAwesome/4.7.0": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authorization/8.0.7": {
         "type": "package",
         "dependencies": {
@@ -1250,6 +1256,27 @@
         "lib/net8.0/OpenAI.xml",
         "lib/netstandard2.0/OpenAI.dll",
         "lib/netstandard2.0/OpenAI.xml"
+      ]
+    },
+    "FontAwesome/4.7.0": {
+      "sha512": "n4H/brfszElyoZ4kmGh8E75uqvLzLvFr3h2PFVdPH1LwUmWIpeqdaW2pcC4oZAhg7sESyObh0IZpAI8COCNeUg==",
+      "type": "package",
+      "path": "fontawesome/4.7.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Content/font-awesome.css",
+        "Content/Content/font-awesome.min.css",
+        "Content/fonts/FontAwesome.otf",
+        "Content/fonts/fontawesome-webfont.eot",
+        "Content/fonts/fontawesome-webfont.svg",
+        "Content/fonts/fontawesome-webfont.ttf",
+        "Content/fonts/fontawesome-webfont.woff",
+        "Content/fonts/fontawesome-webfont.woff2",
+        "fontawesome.4.7.0.nupkg.sha512",
+        "fontawesome.nuspec",
+        "tools/install.ps1"
       ]
     },
     "Microsoft.AspNetCore.Authorization/8.0.7": {
@@ -2850,6 +2877,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Betalgo.OpenAI >= 8.7.2",
+      "FontAwesome >= 4.7.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.7",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.7",
       "Microsoft.NET.ILLink.Tasks >= 8.0.7",
@@ -2902,6 +2930,10 @@
           "Betalgo.OpenAI": {
             "target": "Package",
             "version": "[8.7.2, )"
+          },
+          "FontAwesome": {
+            "target": "Package",
+            "version": "[4.7.0, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",

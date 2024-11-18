@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets/icon-192.png"
     },
     {
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/kitap.png",
+      "PackagePath": "staticwebassets/img/kitap.png"
+    },
+    {
       "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
     },
@@ -41,16 +45,12 @@
       "PackagePath": "staticwebassets/js/pdf-viewer.js"
     },
     {
-      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/06183054_neYeli_dere.pdf",
-      "PackagePath": "staticwebassets/pdf/06183054_neYeli_dere.pdf"
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/JackLondon.pdf",
+      "PackagePath": "staticwebassets/pdf/JackLondon.pdf"
     },
     {
-      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/jackLondon.pdf",
-      "PackagePath": "staticwebassets/pdf/jackLondon.pdf"
-    },
-    {
-      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/sample.pdf",
-      "PackagePath": "staticwebassets/pdf/sample.pdf"
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/pdf/NeseliDere.pdf",
+      "PackagePath": "staticwebassets/pdf/NeseliDere.pdf"
     },
     {
       "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/sample-data/weather.json",

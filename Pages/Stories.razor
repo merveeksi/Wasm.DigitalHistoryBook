@@ -1,5 +1,6 @@
 @page "/stories"
-@inject NavigationManager Navigation
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
 
 <div class="text-center mb-8 mt-8">
     <h1 class="text-4xl font-bold">Tüm Hikayeler</h1>
@@ -13,27 +14,48 @@
 
 <div class="mt-8">
     <h2 class="text-2xl font-bold">3-5 Yaş Kitaplar</h2>
-    <div class="grid grid-cols-3 gap-4 mt-4">
-        <div class="card bg-base-100 shadow-md">
-            <figure>
-                <img src="/Users/pc/Desktop/kitap.png" alt="Kitap 1" />
-            </figure>
-            <div class="card-body">
-                <h3 class="font-bold">Kitap 1</h3>
-                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
-            </div>
-        </div>
-        <div class="card bg-base-100 shadow-md">
-            <figure>
-                <img src="https://example.com/book2.jpg" alt="Kitap 2" />
-            </figure>
-            <div class="card-body">
-                <h3 class="font-bold">Kitap 2</h3>
-                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
-            </div>
-        </div>
-        <!-- Diğer kitaplar buraya eklenebilir -->
+    <div>
+      <button class="btn btn-primary button-right" @onclick="ShowAllStories">Tümünü Gör</button>
     </div>
+<div class="grid grid-cols-3 gap-4 mt-4">
+    <div class="card bg-base-100 shadow-md">
+        <figure>
+            <img src="/img/kitap.png" alt="Kitap 1" style="width: 20%;" />
+        </figure>
+        <div class="card-body">
+            <h3 class="font-bold">Kitap 1</h3>
+            <button class="btn btn-primary" @onclick="OpenPdf">PDF Görüntüle</button>
+        </div>
+    </div>
+    <div class="card bg-base-100 shadow-md">
+        <figure>
+            <img src="/img/kitap.png" alt="Kitap 2" style="width: 20%;" />
+        </figure>
+        <div class="card-body">
+            <h3 class="font-bold">Kitap 2</h3>
+            <button class="btn btn-primary" @onclick="OpenPdf">PDF Görüntüle</button>
+        </div>
+    </div>
+    <div class="card bg-base-100 shadow-md">
+        <figure>
+            <img src="/img/kitap.png" alt="Kitap 2" style="width: 20%;" />
+        </figure>
+        <div class="card-body">
+            <h3 class="font-bold">Kitap 2</h3>
+            <button class="btn btn-primary" @onclick="OpenPdf">PDF Görüntüle</button>
+        </div>
+    </div>
+    <div class="card bg-base-100 shadow-md">
+        <figure>
+            <img src="/img/kitap.png" alt="Kitap 2" style="width: 20%;" />
+        </figure>
+        <div class="card-body">
+            <h3 class="font-bold">Kitap 2</h3>
+            <button class="btn btn-primary" @onclick="OpenPdf">PDF Görüntüle</button>
+        </div>
+    </div>
+    <!-- Diğer kitaplar buraya eklenebilir -->
+</div>
 </div>
 
 <div class="mt-8">
@@ -41,20 +63,20 @@
     <div class="grid grid-cols-3 gap-4 mt-4">
         <div class="card bg-base-100 shadow-md">
             <figure>
-                <img src="https://example.com/book3.jpg" alt="Kitap 3" />
+                <img src="/img/kitap.png" alt="Kitap 3" style="width: 20%;" />
             </figure>
             <div class="card-body">
                 <h3 class="font-bold">Kitap 3</h3>
-                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+                <button class="btn btn-primary" @onclick="OpenPdf">PDF Görüntüle</button>
             </div>
         </div>
         <div class="card bg-base-100 shadow-md">
             <figure>
-                <img src="https://example.com/book4.jpg" alt="Kitap 4" />
+                <img src="/img/kitap.png" alt="Kitap 4" style="width: 20%;" />
             </figure>
             <div class="card-body">
                 <h3 class="font-bold">Kitap 4</h3>
-                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+                <button class="btn btn-primary" @onclick="OpenPdf">PDF Görüntüle</button>
             </div>
         </div>
         <!-- Diğer kitaplar buraya eklenebilir -->
@@ -66,20 +88,20 @@
     <div class="grid grid-cols-3 gap-4 mt-4">
         <div class="card bg-base-100 shadow-md">
             <figure>
-                <img src="https://example.com/book5.jpg" alt="Kitap 5" />
+                <img src="/img/kitap.png" alt="Kitap 5" style="width: 20%;" />
             </figure>
             <div class="card-body">
                 <h3 class="font-bold">Kitap 5</h3>
-                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+                <button class="btn btn-primary" @onclick="OpenPdf">PDF Görüntüle</button>
             </div>
         </div>
         <div class="card bg-base-100 shadow-md">
             <figure>
-                <img src="https://example.com/book6.jpg" alt="Kitap 6" />
+                <img src="/img/kitap.png" alt="Kitap 6" style="width: 20%;" />
             </figure>
             <div class="card-body">
                 <h3 class="font-bold">Kitap 6</h3>
-                @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/jackLondonSecmeHikayeler.pdf')">PDF Görüntüle</button> *@
+                <button class="btn btn-primary" @onclick="OpenPdf">PDF Görüntüle</button>
             </div>
         </div>
         <!-- Diğer kitaplar buraya eklenebilir -->
@@ -90,26 +112,85 @@
 <div class="grid grid-cols-3 gap-4 mt-4">
     <div class="card bg-base-100 shadow-md">
         <figure>
-            <img src="https://example.com/audioBook1.jpg" alt="Sesli Kitap 1" />
+            <img src="/img/kitap.png" alt="Sesli Kitap 1" style="width: 20%;" />
         </figure>
         <div class="card-body">
             <h3 class="font-bold">Sesli Kitap 1</h3>
-            @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/audioBook1.pdf')">Dinle</button> *@
+            <button class="btn btn-primary" @onclick="OpenPdf">Dinle</button>
         </div>
     </div>
     <div class="card bg-base-100 shadow-md">
         <figure>
-            <img src="https://example.com/audioBook2.jpg" alt="Sesli Kitap 2" />
+            <img src="/img/kitap.png" alt="Sesli Kitap 2" style="width: 20%;" />
         </figure>
         <div class="card-body">
             <h3 class="font-bold">Sesli Kitap 2</h3>
-            @* <button class="btn btn-primary" @onclick="() => NavigateToPdf('pdf/audioBook2.pdf')">Dinle</button> *@
+            <button class="btn btn-primary" @onclick="OpenPdf">Dinle</button>
         </div>
     </div>
     <!-- Diğer sesli kitaplar buraya eklenebilir -->
 </div>
 
+<!-- Pagination -->
+<div class="flex justify-between items-center mt-4">
+    <button class="btn btn-primary" @onclick="ShowAllStories">Tümünü Gör</button>
+    <div>
+        <button @onclick="GoToPreviousPage" disabled="@(CurrentPage <= 1)" class="btn btn-secondary">
+            ‹ Önceki
+        </button>
+        <span>@CurrentPage / @TotalPages</span>
+        <button @onclick="GoToNextPage" disabled="@(CurrentPage >= TotalPages)" class="btn btn-secondary">
+            Sonraki ›
+        </button>
+    </div>
+</div>
+
+<!-- Yukarı çıkma ok simgesi sağda -->
+<div class="position fixed bottom-16 right-16">
+    <span @onclick="ScrollToTop" style="cursor: pointer;">
+        <i class="fa-sharp fa-solid fa-circle-chevron-up" style="font-size: 24px; color: green;"></i>
+    </span>
+</div>
+
+<div class="pagination">
+    <button @onclick="GoToPreviousPage" disabled="@(CurrentPage <= 1)">
+        ‹ Previous
+    </button>
+    <span>@CurrentPage / @TotalPages</span>
+    <button @onclick="GoToNextPage" disabled="@(CurrentPage >= TotalPages)">
+        Next ›
+    </button>
+</div>
 @code {
+     [Parameter] public int CurrentPage { get; set; } = 1;
+    [Parameter] public int TotalPages { get; set; }
+    [Parameter] public EventCallback<int> OnPageChanged { get; set; }
+
+    
+    private void ShowAllStories()
+    {
+        // Tüm hikayeleri gösterme işlemi
+        // Örneğin, tüm hikayeleri bir servisten almak için gerekli kodu ekleyin
+    }
+    
+
+    private async Task GoToPreviousPage()
+    {
+        if (CurrentPage > 1)
+        {
+            CurrentPage--;
+            await OnPageChanged.InvokeAsync(CurrentPage);
+        }
+    }
+
+    private async Task GoToNextPage()
+    {
+        if (CurrentPage < TotalPages)
+        {
+            CurrentPage++;
+            await OnPageChanged.InvokeAsync(CurrentPage);
+        }
+    }
     private string searchTerm = "";
 
     private void SearchStories()
@@ -118,8 +199,18 @@
         // Örneğin, hikayeleri filtrelemek için bir servis çağrısı yapılabilir
     }
 
-    private void NavigateToPdf(string pdfUrl)
+    private void OpenPdf()
     {
-        Navigation.NavigateTo($"/pdf-viewer?pdfUrl={pdfUrl}");
+        // PDF açma işlemi burada gerçekleştirilecek
+        // Örneğin, belirli bir PDF dosyasını açmak için gerekli kodu ekleyin
+        NavigationManager.NavigateTo("pdf/JackLondon.pdf", true);
+    }
+
+    private void ScrollToTop()
+    {
+        // Sayfanın en üstüne kaydırma işlemi
+        var top = "window.scrollTo(0, 0);";
+        // JavaScript kodunu çalıştır
+        JSRuntime.InvokeVoidAsync("eval", top);
     }
 }

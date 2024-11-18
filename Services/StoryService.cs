@@ -22,7 +22,7 @@ public class StoryService : IStoryService {
             {
                 Title = "Örnek Hikaye",
                 Author = "Yazar Adı",
-                FilePath = "Data/ornek_hikaye.txt"
+                PdfUrl = "wwwroot/pdf/OrnekHikaye.pdf"
             }
             // Diğer hikayeleri buraya ekleyin
         };

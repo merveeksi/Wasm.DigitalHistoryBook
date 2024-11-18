@@ -1,3 +1,45 @@
 .my-clickable-button {
     cursor: pointer;
 }
+.relative {
+    position: relative;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #d0d0d0;
+}
+.button-right {
+    float: right;
+}
