@@ -15,8 +15,8 @@
     <div class="card bg-base-200 shadow-xl mb-8 transition-transform transform hover:scale-105">
         <div class="card-body">
             <h2 class="card-title mb-4 mt-8">Kendi hikayeni oluşturmak ister misin?</h2>
-            <textarea @bind=@prompt class="textarea textarea-bordered w-full mb-4" placeholder="Açıklamayı buraya yazınız..." style="height: 200px;"></textarea>
-
+            <textarea @bind=@prompt class="textarea textarea-bordered w-full mb-4 transition-transform transform hover:scale-105" placeholder="Açıklamayı buraya yazınız..." style="height: 200px;"></textarea>
+            
             <textarea @bind=@title class="textarea textarea-bordered w-full mb-4" placeholder="Hikaye Başlığı" style="height: 50px;"></textarea>
             
             <!-- Tür Seçin -->
@@ -53,12 +53,12 @@
                 <button class="btn btn-primary btn-lg" @onclick="GenerateStoryAsync">Hikaye Oluştur</button>
             </div>
            
-            @if (!string.IsNullOrEmpty(generatedStory))
-            {
-                <h4 class="text-2xl font-semibold mt-4">Oluşturulan Hikaye:</h4>
-                <p>@generatedStory</p>
-                <button class="btn btn-secondary mt-4" @onclick="NavigateToStoryDetails">Hikaye Detaylarına Git</button>
-            }
+            @* @if (!string.IsNullOrEmpty(generatedStory)) *@
+            @* { *@
+            @*     <h4 class="text-2xl font-semibold mt-4">Oluşturulan Hikaye:</h4> *@
+            @*     <p>@generatedStory</p> *@
+            @*     <button class="btn btn-secondary mt-4" @onclick="NavigateToStoryDetails">Hikaye Detaylarına Git</button> *@
+            @* } *@
         </div>
 
         @if (isLoading)
@@ -66,6 +66,19 @@
             <div class="flex justify-center items-center h-64">
                 <span class="loading loading-spinner loading-lg"></span>
             </div>
+        }
+        else if (!string.IsNullOrEmpty(generatedStory))
+        {
+        <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title mb-4">Generated Result</h2>
+                <div class="bg-base-300 p-4 rounded-lg min-h-[100px]">
+                    <pre><code class="text-base-content">
+                            @generatedStory
+                        </code></pre>
+                </div>
+            </div>
+        </div>
         }
     </div>
 </div>
@@ -92,7 +105,16 @@
             {
                 Messages = new List<ChatMessage>
                 {
-                    ChatMessage.FromSystem("Sen çocukların yaş ve ilgi alanlarına göre hikaye oluşturabilirsin."),
+                    ChatMessage.FromSystem("Sen çocukların yaş ve ilgi alanlarına göre hikaye oluşturabilirsin. Bir çocuk hikayesi oluşturmanı istiyorum. Hikaye şu özelliklere sahip olmalı:" +
+                                           "Hedef yaş grubu: [Yaş Grubu (örn. 3-5 yaş, 6-8 yaş)] kullanıcı seçenekler arasından yaşı seçecektir. " +
+                                           "Tür: [Tür (örn. macera, bilim kurgu, korku)]" +
+                                           "İlgi alanları: [Çocuğun İlgi Alanları (örn. uzay, hayvanlar, sihir)]" +
+                                           "İllüstrasyon stili: [İllüstrasyon Stili (örn. çizgi film, gerçekçi)]" +
+                                           "Hikaye başlığı: [Hikaye Başlığı]" +
+                                           "Hikayenin tonu: [Eğlenceli, macera dolu, öğretici]" +
+                                           "Hikayenin amacı: [Mesaj veya tema (örn. paylaşım, cesaret, doğa sevgisi)]" +
+                                           "Lütfen hikaye, çocuğun yaşına uygun dilde yazılsın ve hayal gücünü desteklesin. Hikaye yaklaşık [paragraf sayısı veya uzunluk] uzunluğunda olsun." +
+                                           "Eğer bir örnek gerekiyorsa:\"Bir 7 yaşındaki uzayı seven çocuğa yönelik eğlenceli bir hikaye oluştur. Ana karakter cesur bir astronot (Alex) olsun ve mesaj olarak takım çalışmasını öğretsin. Hikaye 3 kısa paragraf olsun.\""),
                     ChatMessage.FromUser(prompt),
                 },
                 Model = OpenAI.ObjectModels.Models.Gpt_4o,
@@ -102,22 +124,28 @@
             if (completionResult.Successful)
             {
                 generatedStory = completionResult.Choices.First().Message.Content;
+                Console.WriteLine(completionResult.Choices.First().Message.Content);
+            }
+            else
+            {
+                generatedStory = $"Hikaye oluşturulurken bir hata oluştu: {completionResult.Error?.Message ?? "Bilinmeyen hata."}";
             }
         }
         catch (Exception e)
         {
             Console.WriteLine(e.ToString());
-            throw;
+            generatedStory = "Bir hata oluştu: " + e.Message; // Hata mesajını kullanıcıya göster
         }
         finally
         {
             isLoading = false;
+            StateHasChanged(); // UI'yi güncelle
         }
     }
 
-    private void NavigateToStoryDetails()
-    {
-        // Hikaye başlığını ve içeriğini StoryDetails sayfasına geçirin
-        Navigation.NavigateTo($"/storyDetails/{storyId}");
-    }
+    @*     private void NavigateToStoryDetails() *@
+    @*     { *@
+    @*         // Hikaye başlığını ve içeriğini StoryDetails sayfasına geçirin *@
+    @*         Navigation.NavigateTo($"/storyDetails/{storyId}"); *@
+    @*     } *@
 }
