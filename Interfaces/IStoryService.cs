@@ -12,4 +12,6 @@ public interface IStoryService
     Task<string> GetAudioForStoryAsync(int id); // Hikaye ses dosyasını al
     Task<string> CreateStory(string title, string genre, string targetAge, string illustrationStyle);
     Task DeleteStoryAsync(int storyId);
+    void SetStory(string newStory);
+    string GetStory();
 }

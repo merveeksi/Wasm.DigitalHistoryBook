@@ -2,9 +2,10 @@ namespace Wasm.DigitalHistoryBook.Enums;
 
 public enum Genre
 {
-    Adventure=1,
-    Fantasy=2,
-    Mystery=3,
-    ScienceFiction=4,
-    Thriller=5
+    Masal=1,
+    Eğitici=2,
+    Macera=3,
+    Fantezi=4,
+    BilimKurgu=5,
+    Gerilim=6
 }

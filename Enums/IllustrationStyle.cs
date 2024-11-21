@@ -2,8 +2,9 @@ namespace Wasm.DigitalHistoryBook.Enums;
 
 public enum IllustrationStyle
 {
-    Cartoon = 1,
-    Realistic = 2,
-    Caricature = 3,
-    Photorealistic = 4
+    ÇizgiFilm=1,
+    Gerçekçi=2,
+    Karikatür=3,
+    Renkli=4,
+    HayalGücü=5,
 }

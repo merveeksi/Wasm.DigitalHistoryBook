@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mieyOlKc3oQ=",
+  "dgSpecHash": "5MFqz34RPVU=",
   "success": true,
   "projectFilePath": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,11 @@
     "/Users/pc/.nuget/packages/microsoft.aspnetcore.components.webassembly/8.0.7/microsoft.aspnetcore.components.webassembly.8.0.7.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.aspnetcore.components.webassembly.devserver/8.0.7/microsoft.aspnetcore.components.webassembly.devserver.8.0.7.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.aspnetcore.metadata/8.0.7/microsoft.aspnetcore.metadata.8.0.7.nupkg.sha512",
+    "/Users/pc/.nuget/packages/microsoft.entityframeworkcore/8.0.7/microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
+    "/Users/pc/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.7/microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512",
+    "/Users/pc/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.7/microsoft.entityframeworkcore.analyzers.8.0.7.nupkg.sha512",
+    "/Users/pc/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "/Users/pc/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.extensions.configuration.binder/8.0.2/microsoft.extensions.configuration.binder.8.0.2.nupkg.sha512",

@@ -2,7 +2,7 @@ namespace Wasm.DigitalHistoryBook.Enums;
 
 public enum AgeGroup
 {
-    ThreeToFive=1,
-    SixToEight=2,
-    NineToTwelve=3
+    Yaş_3_5 = 1,
+    Yaş_6_8 = 2,
+    Yaş_9_12 = 3
 }

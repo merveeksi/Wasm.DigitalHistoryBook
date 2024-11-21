@@ -10,10 +10,24 @@ public class StoryService : IStoryService {
     private readonly HttpClient _httpClient;
     private List<Story> stories = new List<Story>
     {
-        new Story { Id = 1, Title = "Hikaye 1", Content = "Hikaye 1 içeriği", AgeGroup = AgeGroup.ThreeToFive },
-        new Story { Id = 2, Title = "Hikaye 2", Content = "Hikaye 2 içeriği", AgeGroup = AgeGroup.SixToEight },
-        new Story { Id = 3, Title = "Hikaye 3", Content = "Hikaye 3 içeriği", AgeGroup = AgeGroup.NineToTwelve }
+        new Story { Id = 1, Title = "Hikaye 1", Content = "Hikaye 1 içeriği", AgeGroup = AgeGroup.Yaş_3_5 },
+        new Story { Id = 2, Title = "Hikaye 2", Content = "Hikaye 2 içeriği", AgeGroup = AgeGroup.Yaş_6_8 },
+        new Story { Id = 3, Title = "Hikaye 3", Content = "Hikaye 3 içeriği", AgeGroup = AgeGroup.Yaş_9_12 }
     };
+
+    public string Story { get; set; } = string.Empty;
+
+    public void SetStory(string story)
+    {
+        Story = story;
+    }
+
+    public string GetStory()
+    {
+        return Story;
+    }
+
+
     public StoryService()
     {
         _stories = new List<Story>

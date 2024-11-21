@@ -29,6 +29,34 @@
       "PackagePath": "staticwebassets/icon-192.png"
     },
     {
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/bg.png",
+      "PackagePath": "staticwebassets/img/bg.png"
+    },
+    {
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/image1.jpg",
+      "PackagePath": "staticwebassets/img/image1.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/image2.jpg",
+      "PackagePath": "staticwebassets/img/image2.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/image3.jpg",
+      "PackagePath": "staticwebassets/img/image3.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/image4.jpg",
+      "PackagePath": "staticwebassets/img/image4.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/image5.jpg",
+      "PackagePath": "staticwebassets/img/image5.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/image6.jpg",
+      "PackagePath": "staticwebassets/img/image6.jpg"
+    },
+    {
       "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/img/kitap.png",
       "PackagePath": "staticwebassets/img/kitap.png"
     },

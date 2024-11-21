@@ -1,13 +1,3 @@
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.csproj.AssemblyReference.cache
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.GeneratedMSBuildEditorConfig.editorconfig
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.AssemblyInfoInputs.cache
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.AssemblyInfo.cs
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.csproj.CoreCompileInputs.cache
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.MvcApplicationPartsAssemblyInfo.cache
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.sourcelink.json
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.dll
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/refint/Wasm.DigitalHistoryBook.dll
-/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.pdb
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/blazor.boot.json
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/blazor.webassembly.js
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/dotnet.js
@@ -26,6 +16,10 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.CSharp.wasm
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.EntityFrameworkCore.Abstractions.wasm
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.EntityFrameworkCore.wasm
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Caching.Abstractions.wasm
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Caching.Memory.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Configuration.Abstractions.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Configuration.Binder.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Configuration.FileExtensions.wasm
@@ -301,6 +295,7 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.IO.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Text.Json.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Threading.Tasks.Extensions.wasm.gz
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Caching.Abstractions.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Threading.ThreadPool.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Windows.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Threading.wasm.gz
@@ -334,6 +329,8 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Net.Sockets.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Runtime.CompilerServices.VisualC.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Memory.wasm.gz
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.EntityFrameworkCore.wasm.gz
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Caching.Memory.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.IO.FileSystem.AccessControl.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Security.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/mscorlib.wasm.gz
@@ -407,6 +404,7 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.ServiceProcess.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Options.ConfigurationExtensions.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Text.Encoding.CodePages.wasm.gz
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/Microsoft.EntityFrameworkCore.Abstractions.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Console.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Security.SecureString.wasm.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/wwwroot/_framework/System.Diagnostics.TraceSource.wasm.gz
@@ -438,6 +436,10 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.AspNetCore.Components.Web.dll
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.AspNetCore.Components.WebAssembly.dll
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.AspNetCore.Metadata.dll
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Binder.dll
@@ -636,6 +638,13 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/icudt_CJK.dat
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/icudt_EFIGS.dat
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/bin/Debug/net8.0/icudt_no_CJK.dat
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.csproj.AssemblyReference.cache
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.AssemblyInfoInputs.cache
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.AssemblyInfo.cs
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.csproj.CoreCompileInputs.cache
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.MvcApplicationPartsAssemblyInfo.cache
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.sourcelink.json
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/OpenAI.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.AspNetCore.Authorization.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.AspNetCore.Components.wasm
@@ -643,6 +652,10 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.AspNetCore.Components.Web.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.AspNetCore.Components.WebAssembly.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.AspNetCore.Metadata.wasm
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.EntityFrameworkCore.wasm
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.EntityFrameworkCore.Abstractions.wasm
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.Extensions.Caching.Abstractions.wasm
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.Extensions.Caching.Memory.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.Extensions.Configuration.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.Extensions.Configuration.Abstractions.wasm
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/webcil/Microsoft.Extensions.Configuration.Binder.wasm
@@ -856,6 +869,10 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/np7amszk54.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/ezem3rr7e2.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/c84xe47zge.gz
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/kuu8b8dnp4.gz
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/x0zv39oey1.gz
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/e6vkb8stn7.gz
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/kz86321wvi.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/ey71xh4j21.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/yo8kxw5u82.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/y0r9gidwgr.gz
@@ -1058,4 +1075,8 @@
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/uzt0zomuz1.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/zut9de47ww.gz
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.Dig.5C51CFA3.Up2Date
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.dll
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/refint/Wasm.DigitalHistoryBook.dll
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/Wasm.DigitalHistoryBook.pdb
 /Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/ref/Wasm.DigitalHistoryBook.dll
+/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/scopedcss/Pages/CreateStory.razor.rz.scp.css

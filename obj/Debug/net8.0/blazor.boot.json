@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Wasm.DigitalHistoryBook",
   "resources": {
-    "hash": "sha256-Rs/BZbn7GIdy/pDqlZu/CsPNW0pdTAahwDJiP5uP2TY=",
+    "hash": "sha256-0rtaG5H7KwlCqmOZVECKpxZLCjwQwLL4rv1IZ5lGEEc=",
     "jsModuleNative": {
       "dotnet.native.8.0.7.gpvyg56y8f.js": "sha256-tFsxPBbhkdn6GKNBKvCRLzrfAHdyM86odYTe0MtrwMk="
     },
@@ -24,6 +24,10 @@
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-xUXkW7JRXPVjIOKez4b8snSiAM4j0j94by1z9OMW2UA=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-gbP3w8Fy8u6E/VxRmH65xv70D88hF37gvIe3dsVTE4k=",
       "Microsoft.AspNetCore.Metadata.wasm": "sha256-H+Or4mx9ew+622c40gHkM70UI+dPHz2Hpa4CGjtF1RA=",
+      "Microsoft.EntityFrameworkCore.wasm": "sha256-7fSb2cix6eYFWRp3GE9BNYF1kJDpGd8BYDQQguMYY+8=",
+      "Microsoft.EntityFrameworkCore.Abstractions.wasm": "sha256-2QXv1VSzY/hx2sAlze6Gv54lMM8JHc6dBeXFjKJjGl0=",
+      "Microsoft.Extensions.Caching.Abstractions.wasm": "sha256-ygxx8pKlN4YllvAX2HADU+dKWSOZRMNfSP4nHkPMH+8=",
+      "Microsoft.Extensions.Caching.Memory.wasm": "sha256-K0Qzxs1gptgogO6juGZzfFp3Q7gUtMCJbo7ateym6cw=",
       "Microsoft.Extensions.Configuration.wasm": "sha256-UDGEQR7J3WTfzYMgOzxVIBwFQtKEeJvO8UgrWagypdE=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-yNdqbqDWGiJo943D7LPak5xryCBEsNH0wtdiuU1R9VE=",
       "Microsoft.Extensions.Configuration.Binder.wasm": "sha256-fNNlyyW44y8Gp6dvOtsvHoVNzpT8lrKmPleg5CDhRAo=",
@@ -213,10 +217,10 @@
       "mscorlib.wasm": "sha256-fLbZiSHBNdpHoh4EgRqMaNP5NQyIK5TEj6AXFLqo8m8=",
       "netstandard.wasm": "sha256-d4xbAE8qrKq5euUoZHPO+jkYPjlCYBzUew45MKsYKic=",
       "System.Private.CoreLib.wasm": "sha256-8yi6NcX1lkNQgV4WKjnMBYIZyKh4P+OXnXVQmgxGZD4=",
-      "Wasm.DigitalHistoryBook.wasm": "sha256-9UeqP2MH0TodueJKflvIB80HUQ4lQJJdFMDKHDwXiD8="
+      "Wasm.DigitalHistoryBook.wasm": "sha256-lgl61KQUkJJGEL8FBdh8cN0Alk4Hywkg3UsTGgsJtHE="
     },
     "pdb": {
-      "Wasm.DigitalHistoryBook.pdb": "sha256-TkgdkT6Rh0mfLWxQX9wBNpDUG8QuA50nH6XVVMePydo="
+      "Wasm.DigitalHistoryBook.pdb": "sha256-Ws7J2QEk4qWsU3yMKXWKn3410n8CsabND4IuFXI4YII="
     }
   },
   "cacheBootResources": true,
