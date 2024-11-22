@@ -130,6 +130,13 @@ main[b-gl0tguxalk] {
         grid-template-columns: 1fr; /* Tek sütunlu düzen */
     }
 }
+@media (max-width: 768px) {
+    .story-container[b-ixjq009kzp] {
+        max-height: 400px; /* Daha fazla yükseklik ver */
+        padding: 10px; /* İçerik kenarlarını daralt */
+        font-size: 14px; /* Daha küçük yazı tipi kullan */
+    }
+}
 button[b-ixjq009kzp] {
     position: relative;
     padding: 13px 35px;
@@ -382,13 +389,101 @@ button:hover .icon-5[b-ixjq009kzp] {
 }
 
 .story-container[b-ixjq009kzp] {
-    background-color: #f9f9f9; /* Açık gri arka plan */
+    background-color: #f0f0f0; /* Daha açık bir arka plan rengi */
     color: #333; /* Koyu yazı rengi */
     padding: 20px; /* İçerik için boşluk */
     border-radius: 8px; /* Kenarları yuvarlat */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
     margin-top: 20px; /* Üstten boşluk */
+    max-height: 500px; /* Alanın yüksekliğini sınırlandırın */
+    min-height: 300px; /* Alanın yüksekliğini sınırlandırın */
+    white-space: pre-wrap; /* Satır sonlarını korumak için */
+    overflow-y: auto; /* Taşma olduğunda dikey kaydırma çubuğu ekleyin */
+    width: 100%; /* Konteyner genişliğiyle sınırlayın */
+    box-sizing: border-box;
 }
+.text-base-content[b-ixjq009kzp] {
+    white-space: pre-wrap;
+    font-size: 18px; /* Başlık için daha büyük yazı tipi */
+}
+.flex[b-ixjq009kzp] {
+    border-radius: 8px;
+    background-color: #f0f0f0; /* Daha açık bir arka plan rengi */
+    justify-content: center;
+    align-items: center;
+}
+.loader[b-ixjq009kzp] {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    color: #F8BECB;
+  }
+    .loader[b-ixjq009kzp]:before,
+    .loader[b-ixjq009kzp]:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin-b-ixjq009kzp linear infinite;
+    }
+    .loader[b-ixjq009kzp]:after {
+      color: #00B7EB;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate-b-ixjq009kzp {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw-b-ixjq009kzp {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin-b-ixjq009kzp {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
 /* /Pages/Home.razor.rz.scp.css */
 .my-clickable-button[b-sxq5zxjb5w] {
     cursor: pointer;

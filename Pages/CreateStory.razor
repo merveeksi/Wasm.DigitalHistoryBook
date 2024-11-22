@@ -16,15 +16,16 @@
             <div class="card-body" style="padding-top: 10px; height: auto; min-height: 400px;">
                 <h2 class="card-title mb-4 mt-4">Kendi hikayeni oluşturmak ister misin?</h2>
                 <textarea @bind=@prompt class="textarea textarea-bordered w-full mb-4 transition-transform transform hover:scale-105" placeholder="Açıklamayı buraya yazınız..." style="height: 150px;"></textarea>
-                
+                <div class="card-actions justify-end"></div>
+
                 <textarea @bind=@title class="textarea textarea-bordered w-full mb-4 transition-transform transform hover:scale-105" placeholder="Hikaye Başlığı" style="height: 30px;"></textarea>
-                
+
                 <h3 class="font-bold mb-2">Tür Seçin</h3>
                 <select @bind="genre" class="select select-bordered w-full mb-4">
                     <option value="">Seçiniz</option>
                     @foreach (var g in Enum.GetValues(typeof(Genre)).Cast<Genre>())
                     {
-                        <option value="@g">@g.ToString()</option>
+                    <option value="@g">@g.ToString()</option>
                     }
                 </select>
 
@@ -33,7 +34,7 @@
                     <option value="">Seçiniz</option>
                     @foreach (var age in Enum.GetValues(typeof(AgeGroup)).Cast<AgeGroup>())
                     {
-                        <option value="@age">@age.ToString()</option>
+                    <option value="@age">@age.ToString()</option>
                     }
                 </select>
 
@@ -42,14 +43,9 @@
                     <option value="">Seçiniz</option>
                     @foreach (var style in Enum.GetValues(typeof(IllustrationStyle)).Cast<IllustrationStyle>())
                     {
-                        <option value="@style">@style.ToString()</option>
+                    <option value="@style">@style.ToString()</option>
                     }
                 </select>
-
-                @* <div class="card-actions justify-end" style="margin-top: 5px;"> *@
-                @*     <button class="btn btn-primary btn-lg transition-transform transform hover:scale-110" style="background-color: #4A90E2; color: white;" @onclick="GenerateStoryAsync">Hikaye Oluştur</button> *@
-                @* </div> *@
-                @* <div class="card-actions justify-end" style="margin-top: 5px;"> *@
                 <br/>
                 <br/>
                 <br/>
@@ -75,92 +71,83 @@
                 <br/>
                 <br/>
 
-                @* @if (!string.IsNullOrEmpty(generatedStory)) *@
-                @* { *@
-                @*     <h4 class="text-2xl font-semibold mt-4">Oluşturulan Hikaye:</h4> *@
-                @*     <p>@generatedStory</p> *@
-                @*     <button class="btn btn-secondary mt-4" @onclick="NavigateToStoryDetails">Hikaye Detaylarına Git</button> *@
-                @* } *@
-                
-                
             </div>
         </div>
 
         @if (isLoading)
         {
-            <div class="flex justify-center items-center h-64">
-                <span class="loading loading-spinner loading-lg"></span>
-            </div>
+        <div class="flex justify-center items-center h-64">
+            <span class="loader"></span>
+        </div>
         }
         else if (!string.IsNullOrEmpty(generatedStory))
         {
-            <div class="card bg-base-200 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title mb-4">Oluşturulan Hikaye</h2>
-                    <div class="story-container">
-                        <pre><code class="text-base-content">
-                            @generatedStory
-                        </code></pre>
-                    </div>
+        <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+                <div class="flex justify-center items-center">
+                    <h2 class="card-title mb-4">
+                        <i class="fas fa-edit"></i> Oluşturulan Hikaye
+                    </h2>
+                </div>
+                <div class="story-container" style="overflow: auto; max-height: 300px; white-space: pre-wrap;">
+                    <pre class="text-base-content" >
+                        @generatedStory
+                    </pre>
                 </div>
             </div>
+        </div>
         }
     </div>
 </div>
 
 @code
 {
-    private string title;
-    private Genre genre;
-    private AgeGroup targetAge;
-    private IllustrationStyle illustrationStyle;
-    private string prompt = string.Empty;
-    private string generatedStory = string.Empty;
-    private bool isLoading = false;
+private string title;
+private Genre genre;
+private AgeGroup targetAge;
+private IllustrationStyle illustrationStyle;
+private string prompt = string.Empty;
+private string generatedStory = string.Empty;
+private bool isLoading = false;
 
-    private async Task GenerateStoryAsync()
-    {
-        isLoading = true;
-        generatedStory = string.Empty;
+private async Task GenerateStoryAsync()
+{
+isLoading = true;
+generatedStory = string.Empty;
 
-        try
-        {
-            var completionResult = await OpenAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
-            {
-                Messages = new List<ChatMessage>
-                {
-                    ChatMessage.FromSystem($"Sen, çocukların yaş grubu ve ilgi alanlarına göre hikayeler oluşturabilecek bir yapay zeka asistanısın. Hikaye başlığı: {title}, Açıklama: {prompt}, Tür: {genre}, Yaş Grubu: {targetAge}, İllüstrasyon Stili: {illustrationStyle}. Şimdi bir çocuk hikayesi oluşturmanı istiyorum."),
-                },
-                Model = Models.Gpt_4o,
-                MaxTokens = 4096,
-            });
+try
+{
+var completionResult = await OpenAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
+{
+Messages = new List<ChatMessage>
+{
+ChatMessage.FromSystem($"Sen, çocukların yaş grubu ve ilgi alanlarına göre hikayeler oluşturabilecek bir yapay zeka asistanısın. Hikaye başlığı: {title}, Açıklama: {prompt}, Tür: {genre}, Yaş Grubu: {targetAge}, İllüstrasyon Stili: {illustrationStyle}. Şimdi bir çocuk hikayesi oluşturmanı istiyorum."),
+},
+Model = Models.Gpt_4o,
+MaxTokens = 4096,
+});
 
-            if (completionResult.Successful)
-            {
-                generatedStory = completionResult.Choices.First().Message.Content;
-            }
-            else
-            {
-                // Hata mesajını konsola yazdır
-                Console.WriteLine($"API Hatası: {completionResult.Error?.Message}");
-                generatedStory = "Hikaye oluşturulamadı: " + completionResult.Error?.Message;
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.ToString());
-            generatedStory = "Bir hata oluştu: " + e.Message; // Hata mesajını kullanıcıya göster
-        }
-        finally
-        {
-            isLoading = false;
-            StateHasChanged(); // UI'yi güncelle
-        }
-    }
+if (completionResult.Successful)
+{
+generatedStory = completionResult.Choices.First().Message.Content;
+}
+else
+{
+// Hata mesajını konsola yazdır
+Console.WriteLine($"API Hatası: {completionResult.Error?.Message}");
+generatedStory = "Hikaye oluşturulamadı: " + completionResult.Error?.Message;
+}
+}
+catch (Exception e)
+{
+Console.WriteLine(e.ToString());
+generatedStory = "Bir hata oluştu: " + e.Message; // Hata mesajını kullanıcıya göster
+}
+finally
+{
+isLoading = false;
+StateHasChanged(); // UI'yi güncelle
+}
+}
 
-    @*     private void NavigateToStoryDetails() *@
-    @*     { *@
-    @*         // Hikaye başlığını ve içeriğini StoryDetails sayfasına geçirin *@
-    @*         Navigation.NavigateTo($"/storyDetails/{storyId}"); *@
-    @*     } *@
 }

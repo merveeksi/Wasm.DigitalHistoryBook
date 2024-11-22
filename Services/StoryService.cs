@@ -125,4 +125,15 @@ public class StoryService : IStoryService {
         var response = await _httpClient.DeleteAsync($"http://localhost:5000/stories/{storyId}");
         response.EnsureSuccessStatusCode();
     }
+
+    public async Task<int> CreateStoryAsync(Story story)
+    {
+        // Hikaye nesnesini veritabanına kaydetme işlemi
+        // Örnek: await _dbContext.Stories.AddAsync(story);
+        // await _dbContext.SaveChangesAsync();
+        // return story.Id; // Hikaye ID'sini döndür
+
+        // Burada örnek bir ID döndürülüyor, gerçek uygulamada veritabanı işlemi yapılmalı
+        return new Random().Next(1, 1000); // Örnek ID
+    }
 } 
