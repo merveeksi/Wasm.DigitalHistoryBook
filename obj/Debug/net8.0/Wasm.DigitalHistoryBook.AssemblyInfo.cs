@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wasm.DigitalHistoryBook")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+727f9fee95b795214b8c0931652bc2f08d4ba849")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d2a6d77ab351f396514b39a84a712e620ee9987")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wasm.DigitalHistoryBook")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wasm.DigitalHistoryBook")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
