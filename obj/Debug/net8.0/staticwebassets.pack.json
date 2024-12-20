@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
     },
     {
-      "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/compressed/xrs8y12ysq.gz",
-      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
-    },
-    {
       "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/obj/Debug/net8.0/scopedcss/bundle/Wasm.DigitalHistoryBook.styles.css",
       "PackagePath": "staticwebassets/Wasm.DigitalHistoryBook.styles.css"
     },
@@ -83,6 +79,10 @@
     {
       "Id": "/Users/pc/Desktop/Wasm.DigitalHistoryBook/Wasm.DigitalHistoryBook/wwwroot/sample-data/weather.json",
       "PackagePath": "staticwebassets/sample-data/weather.json"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Wasm.DigitalHistoryBook.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Wasm.DigitalHistoryBook.Microsoft.AspNetCore.StaticWebAssets.props",
